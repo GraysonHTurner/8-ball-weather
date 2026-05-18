@@ -13,7 +13,7 @@ export default function Home() {
             8-Ball Weather
           </h1>
           <p className="text-gray-400 text-lg md:text-xl max-w-lg mx-auto font-light">
-            Ask a question. But rememeber its just an 8 ball so don't go to crazy...
+            Ask a question. But remember it&apos;s just an 8-ball so don&apos;t go too crazy...
           </p>
         </header>
 

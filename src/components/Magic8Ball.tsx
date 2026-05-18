@@ -10,7 +10,7 @@ interface Magic8BallProps {
 
 export default function Magic8Ball({ isShaking, answer, onShake }: Magic8BallProps) {
   // Floating up animation for the triangle
-  const floatVariants: any = {
+  const floatVariants = {
     hidden: { 
       opacity: 0, 
       scale: 0.5,

@@ -16,6 +16,7 @@ export interface WeatherAnalysis {
   explanation: string;
 }
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function analyzeWeather(data: any, intent: ParsedIntent): WeatherAnalysis {
   // Determine which day to look at based on timeframe
   let dayIndex = 0;

@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Send, MapPin, CloudRain, Thermometer, Plane, Home, Smile, Shirt } from 'lucide-react';
+import { MapPin, CloudRain, Thermometer, Plane, Home, Smile, Shirt } from 'lucide-react';
 import Magic8Ball from './Magic8Ball';
 import { parseIntent } from '@/lib/intent';
 import { getWeatherData, analyzeWeather } from '@/lib/weather';
@@ -59,9 +59,13 @@ export default function WeatherForm() {
         setIsLoading(false);
       }, 2000);
 
-    } catch (err: any) {
+    } catch (err) {
       setTimeout(() => {
-        setError(err.message);
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
         setIsLoading(false);
       }, 1000);
     }
